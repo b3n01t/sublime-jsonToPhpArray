@@ -4,7 +4,7 @@
 
 Clone the repository in your Sublime Text "Packages" directory:
 
-    git clone https://github.com/pavelpachkovskij/sublime-html-to-haml.git "HTML2Haml"
+    git clone https://github.com/b3n01t/sublime-jsonToPhpArray.git "json2phparray"
 
 The "Packages" directory is located at:
 

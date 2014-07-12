@@ -25,8 +25,9 @@ class jsonTophpArrayCommand(sublime_plugin.TextCommand):
 	def convert(self, json):
 		string = self.view.substr(json)
 		string = string.strip()
-		name = re.search(r'var (.*) ?=',string)
-		name = name and name.group(1) or 'PHP_Array'
+		name = re.search(r'(var)? ?(.*) ?=',string)
+		print(name.groups())
+		name = name and name.group(2) or 'PHP_Array'
 		newString = re.sub(r'([#/]? *)var ',r'\1$',string)
 		newString = re.sub(r'= ?{','= array(',newString)
 		newString = re.sub(r'[ \t]*{','array(',newString)
